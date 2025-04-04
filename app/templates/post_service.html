@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Post a New Service</h2>
+
+<form method="POST">
+  <label>Title:</label><br>
+  <input type="text" name="title" required><br><br>
+
+  <label>Description:</label><br>
+  <textarea name="description" required></textarea><br><br>
+
+  <label>Location:</label><br>
+  <input type="text" name="location" required><br><br>
+
+  <label>Payment (₹):</label><br>
+  <input type="number" name="payment" required><br><br>
+
+  <label>Deadline:</label><br>
+  <input type="date" name="deadline" required><br><br>
+
+  <label>Category:</label><br>
+  <select name="category" required>
+    <option value="Home Services">Home Services</option>
+    <option value="Local Information">Local Information</option>
+    <option value="Education & Tutoring">Education & Tutoring</option>
+    <option value="Other">Other</option>
+  </select><br><br>
+
+  <button type="submit">Post Service</button>
+</form>
+{% endblock %}
