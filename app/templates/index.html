@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Available Services</h2>
+
+{% for task in tasks %}
+  <div class="card">
+    <h3>{{ task.title }}</h3>
+    <p><strong>Location:</strong> {{ task.location }}</p>
+    <p><strong>Payment:</strong> ₹{{ task.payment }}</p>
+    <p><strong>Deadline:</strong> {{ task.deadline }}</p>
+    <p>{{ task.description }}</p>
+    <p><strong>Category:</strong> {{ task.category }}</p>
+  </div>
+{% else %}
+  <p>No services found.</p>
+{% endfor %}
+{% endblock %}
